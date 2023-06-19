@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Juego de blackjack" />
+    <title>Blackjack</title>
+
+    <!-- Reset CSS -->
+    <link rel="preload" href="./assets/reset.css" as="style" />
+    <link rel="stylesheet" href="./assets/reset.css" />
+    
+    <!-- Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header text-center">
+      <h1 class="header__title">Blackjack</h1>
+    </header>
+
+    <section class="controls">
+      <div class="wrapper controls__container">
+        <button class="btn btn--green" id="btnStartNewGame">Nuevo juego</button>
+        <button class="btn btn--purple" id="btnGetCard">Pedir Carta</button>
+        <button class="btn btn--orange" id="btnStopGame">Detener</button>
+      </div>
+    </section>
+
+    <section class="game">
+      <div class="wrapper game__container">
+        <div class="deck">
+          <div class="deck__info">
+            <h2 class="deck__player">Jugador</h2>
+            <p class="deck__points">
+              puntos: <span class="points" id="points-player">0</span>
+            </p>
+          </div>
+          <div class="cards" id="jugador-cartas">
+            <!-- <img class="card" src="./assets/img/10D.png" alt="" /> -->
+            <!-- <img class="card" src="./assets/img/10D.png" alt="" /> -->
+            <!-- <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" /> -->
+          </div>
+        </div>
+
+        <div class="deck">
+          <div class="deck__info">
+            <h2 class="deck__player">P.C</h2>
+            <p class="deck__points">
+              puntos: <span class="points" id="points-computer">0</span>
+            </p>
+          </div>
+          <div class="cards" id="computadora-cartas">
+            <!-- <img class="card" src="./assets/img/10D.png" alt="" /> -->
+            <!-- <img class="card" src="./assets/img/10D.png" alt="" /> -->
+            <!-- <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" />
+            <img class="carta" src="./assets/img/10D.png" alt="" /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <p class="footer__copy text-center">&copy; 2023 Sergio Franco.</p>
+      </div>
+    </footer>
+
+    <!-- <div id="app"></div> -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

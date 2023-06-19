@@ -1,0 +1,242 @@
+/* Custom properties */
+:root {
+
+  /* colors */
+  --dark-green-color: #2f4f30;
+  --white-color: #ffffff;
+  --dark-color1: #333333;
+  --dark-color2: #000000;
+
+  /* fonts */
+  --main-font: 'Josefin Sans', sans-serif;
+}
+
+/* general styles */
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+
+  /* background-color: var(--dark-green-color); */
+  font-family: var(--main-font);
+  font-size: 1.6rem;
+  position: relative;
+  padding-bottom: 6.4rem;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+/* h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 3.2rem;
+}
+
+h5 {
+  font-size: 2.8rem;
+}
+
+h6 {
+  font-size: 2.2rem;
+} */
+
+/* utilities */
+.btn {
+  border: none;
+  border-radius: .5rem;
+  background-color: #ccc;
+  color: inherit;
+  display: block;
+  font-size: 1.8rem;
+  min-width: 30%;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-align: center;
+}
+
+
+.btn--green {
+  background-color: #17a552;
+  transition: background-color .3s ease-out;
+}
+
+.btn--purple {
+  background-color: #4169e1;
+  transition: background-color .3s ease-out;
+}
+
+.btn--orange {
+  background-color: #df8d22;
+  transition: background-color .3s ease-out;
+}
+
+.btn--green:hover {
+  background-color: #127c3e;
+}
+
+.btn--purple:hover {
+  background-color: #2553df;
+}
+
+.btn--orange:hover {
+  background-color: #cf6706;
+}
+
+.btn--disabled {
+  text-decoration: line-through;
+  background-color: #aaa;
+}
+
+.wrapper {
+  max-width: 120rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* specific styles */
+.header {
+  color: var(--white-color);
+  background-color: var(--dark-color1);
+}
+
+.header__title {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+.controls__container {
+  color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+@media (min-width: 768px) {
+  .controls__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+.game__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .game__container {
+    flex-direction: row;
+    /* padding-top: 4rem; */
+    padding-bottom: 0;
+
+  }
+}
+
+.deck {
+  flex: 1;
+}
+
+.deck__info {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  column-gap: 1rem;
+}
+
+.deck__player {
+  font-size: 3.2rem;
+}
+
+.deck__points {
+  background-color: gold;
+  border-radius: .5rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: .3rem;
+}
+
+.points {
+  background-color: var(--white-color);
+  padding: .15rem;
+  border-radius: inherit;
+  font-weight: 400;
+}
+
+.cards {
+  background-color: var(--dark-green-color);
+  border-radius: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+
+  min-height: 36rem;
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.card {
+  margin-bottom: -22rem;
+  width: 20rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 0;
+    margin-right: -16rem;
+  }
+}
+
+.footer {
+  background-color: var(--dark-color2);
+  color: var(--white-color);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__copy {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
